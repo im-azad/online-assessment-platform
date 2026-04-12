@@ -6,6 +6,7 @@ export const mockUsers: User[] = [
     email: "employer@example.com",
     name: "John Employer",
     role: "employer",
+    refId: "12341341",
   },
   {
     id: "cand-1",
@@ -13,6 +14,13 @@ export const mockUsers: User[] = [
     name: "Jane Candidate",
     role: "candidate",
   },
+  {
+    id: "user-test",
+    email: "candidate@akij.work",
+    name: "Arif Hossain",
+    role: "candidate",
+    refId: "16101121"
+  }
 ];
 
 export const mockExams: Exam[] = [
@@ -57,6 +65,7 @@ export const mockExams: Exam[] = [
         ],
       },
     ],
+    negativeMarking: 0.25,
   },
   {
     id: "exam-2",
@@ -97,7 +106,50 @@ export const mockExams: Exam[] = [
         ],
       },
     ],
+    negativeMarking: 0.25,
   },
+  {
+    id: "exam-3",
+    title: "Psychometric Test for Management Trainee Officer",
+    description: "Evaluate behavioral traits and cognitive abilities.",
+    employerId: "emp-1",
+    duration: 30,
+    slots: 50,
+    candidates: [],
+    status: "published",
+    createdAt: "2024-02-10T10:00:00Z",
+    questionSets: [
+      {
+        id: "qs-3",
+        title: "Behavioral Basics",
+        description: "Behavioral questions",
+        timeLimit: 30,
+        questions: [],
+      },
+    ],
+    negativeMarking: 0.25,
+  },
+  {
+    id: "exam-4",
+    title: "Psychometric Test for Management Trainee Officer",
+    description: "Evaluate behavioral traits and cognitive abilities.",
+    employerId: "emp-1",
+    duration: 30,
+    slots: 50,
+    candidates: [],
+    status: "published",
+    createdAt: "2024-02-10T10:00:00Z",
+    questionSets: [
+      {
+        id: "qs-4",
+        title: "Behavioral Basics",
+        description: "Behavioral questions",
+        timeLimit: 30,
+        questions: [],
+      },
+    ],
+    negativeMarking: 0.25,
+  }
 ];
 
 export const sampleQuestions = [

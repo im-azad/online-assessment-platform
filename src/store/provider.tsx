@@ -3,8 +3,7 @@
 import { useRef } from "react";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
-import { persistStore } from "redux-persist";
-import { store } from "@/store";
+import { store, persistor } from "@/store";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export type { AppStore } from "@/store";
@@ -14,7 +13,9 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
   
   return (
     <Provider store={storeRef.current}>
-      {children}
+      <PersistGate loading={<Skeleton className="w-full h-screen" />} persistor={persistor}>
+        {children}
+      </PersistGate>
     </Provider>
   );
 }

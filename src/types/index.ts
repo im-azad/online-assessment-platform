@@ -3,6 +3,7 @@ export interface User {
   email: string;
   name: string;
   role: "employer" | "candidate";
+  refId?: string;
 }
 
 export interface AuthState {
@@ -39,6 +40,7 @@ export interface Exam {
   status: "draft" | "published" | "closed";
   createdAt: string;
   duration: number;
+  negativeMarking?: number;
 }
 
 export interface ExamAttempt {

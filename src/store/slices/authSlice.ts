@@ -31,6 +31,12 @@ const authSlice = createSlice({
       state.isLoading = action.payload;
     },
   },
+  extraReducers: (builder) => {
+    // When redux-persist rehydrates from localStorage, mark loading as done
+    builder.addCase("persist/REHYDRATE", (state) => {
+      state.isLoading = false;
+    });
+  },
 });
 
 export const { setCredentials, logout, setLoading } = authSlice.actions;
