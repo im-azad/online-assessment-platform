@@ -88,13 +88,5 @@ export function useBehaviorTracking({
     resetCounts,
     enterFullscreen,
     exitFullscreen,
-    enterFullscreen: async () => {
-      try {
-        await document.documentElement.requestFullscreen();
-        return true;
-      } catch {
-        return false;
-      }
-    },
   };
 }
